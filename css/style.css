@@ -1,0 +1,136 @@
+body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #52658B;
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/737/original/eberhard-grossgasteiger-J9NDmBVhN04-unsplash.jpg?1698959047);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: lightgrey;
+      }
+
+      h1 {
+        font-weight: 600;
+        text-align: center;
+        font-size: 38px;
+      }
+
+      h6 {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.5);
+        width: 20%;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        font-size: 14px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #7272bf;
+      }
+
+      input::placeholder {
+        color: rgba(82, 101, 139, 0.6)
+      }
+
+      .app-container {
+        background-color: white;
+        max-width: 800px;
+        margin: 40px auto 20px;
+        padding: 20px 30px 30px;
+        border-radius: 15px;
+        box-shadow: 7px 7px 2px rgba(82, 101, 139, 0.28);
+      }
+
+      .big-weather-emoji {
+        display: block;
+        margin: 30px auto;
+        font-size: 80px;
+        width: 120px;
+        text-align: center;
+        border: 2px solid darkgrey;
+        border-radius: 50%;
+        padding: 8px;
+      }
+
+      .left-column {
+        justify-self: center;
+        text-align: center;
+        margin-left: 50px;
+        line-height: 27px;
+      }
+
+      .middle-column {
+        justify-self: center;
+        align-self: center;
+        margin-left: 30px;
+      }
+
+      .right-column {
+        justify-self: center;
+        text-align: center;
+        margin-right: 50px;
+        line-height: 27px;
+      }
+
+      .main-temp {
+        font-size: 50px;
+      }
+
+      .day-time {
+        padding-top: 10px;;
+      }
+
+      .search {
+        text-align: center;
+        border-bottom: 0.5px solid #9e9ebf;
+        margin: 30px;
+        padding-bottom: 25px;
+        font-size: 14px;
+      }
+
+      .search-field {
+        background-color: rgba(251, 224, 234, 0.3);
+        border: 0;
+        font-size: 16px;
+        padding: 15px 6px 15px 15px;
+        border-radius: 6px;
+        margin: 20px 6px 20px 20px;
+        width: 40%;
+      }
+
+      .search-button {
+        background-color: rgba(251, 224, 234, 0.6);
+        margin-left: 5px;
+        font-size: 16px;
+        color: #52658B;
+        border: 0;
+        border-radius: 5px;
+        padding: 13px;
+      }
+    
+      .location-dot {
+        margin-left: 30px;
+        color: #858cb2;
+      }
+
+      .weather-six-day {
+        margin: 0 50px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .weather-forecast-day {
+        text-align: center;
+      }
+
+      .icon {
+        font-size: 28px;
+      }
+
+      .temp-range {
+        font-size: 12px;
+      }
