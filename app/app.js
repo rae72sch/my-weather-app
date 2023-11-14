@@ -13,6 +13,14 @@ let day = days[now.getDay()];
 let hour = now.getHours();
 let minute = now.getMinutes();
 
+if (minute < 10) {
+  minute = `0${minute}`;
+}
+
+if (hour < 10) {
+  hour = `0${hour}`;
+}
+
 const dateTime = document.querySelector("#current-day-time");
 dateTime.innerHTML = `${day} ${hour}:${minute}`;
 
