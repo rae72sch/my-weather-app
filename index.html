@@ -13,13 +13,14 @@
       src="https://kit.fontawesome.com/cecf9b33ac.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
-    <title>My Weather</title>
+    <title>My Weather App</title>
   </head>
   <body>
     <div class="app-container">
       <header>
-        <h1>Deeping St James</h1>
+        <h1 id="current-city">Deeping St James</h1>
         <div class="big-weather-emoji">🌤️</div>
       </header>
 
@@ -33,7 +34,7 @@
         </div>
 
         <div class="middle-column">
-          <span class="main-temp"> 7°c </span>
+          <span class="main-temp" id="main-temp"> 7°c </span>
           <a href="http://">/ F</a>
           <div id="current-day-time" class="day-time">Tuesday 10:20</div>
         </div>
@@ -51,9 +52,8 @@
           <label for="city"></label>
           <input
             type="text"
-            id="city"
-            placeholder="Search for a city"
             id="city-search-field"
+            placeholder="Search for a city"
             class="search-field"
             required
           />
