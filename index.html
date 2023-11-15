@@ -21,16 +21,18 @@
     <div class="app-container">
       <header>
         <h1 id="current-city">Deeping St James</h1>
-        <div class="big-weather-emoji">🌤️</div>
+        <div class="big-weather-emoji" id="weather-image-element">🌤️</div>
       </header>
-
+  
       <main>
         <div class="left-column">
-          Partly cloudy
+          <span id="weather-description">Partly cloudy</span>
           <br />
-          Feels like 5°
-          <br />
-          High of 12°
+          Feels like 
+          <span id="feels-like">5°</span>
+          <!-- <br />
+          High of 
+          <span id="high-of">12°</span> -->
         </div>
 
         <div class="middle-column">
@@ -40,11 +42,14 @@
         </div>
 
         <div class="right-column">
-          Wind speed: 8mph
+          Humidity: 
+          <span id="humidity">80</span>%
           <br />
-          Sunrise: 07.49
+           Wind speed: 
+          <span id="wind-speed">8</span>mph
+          <!-- Sunrise: 07.49
           <br />
-          Sunset: 17.39
+          Sunset: 17.39 -->
         </div>
       </main>
       <div class="search">
