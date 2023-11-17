@@ -1,11 +1,13 @@
-function search(event) {
+function searchSubmit(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#city-search-field");
-  let city = searchInputElement.value;
+  // let city = searchInputElement.value;
+  searchCity(searchInputElement.value);
+}
 
+function searchCity(city){
   let apiKey = "b2a5adcct04b33178913oc335f405433";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-
   axios.get(apiUrl).then(currentWeather);
 }
 
@@ -30,8 +32,7 @@ function currentWeather(response) {
   windSpeedElement.innerHTML = `${windSpeed}`;
   humidityElement.innerHTML = response.data.temperature.humidity;
 
-  console.log(response.data);
-  console.log(weatherImageElement);
+ searchCity(response.data.city);
 }
 
 function formatDate(date) {
@@ -62,9 +63,11 @@ function formatDate(date) {
 }
 
 let searchForm = document.querySelector("#city-search-form");
-searchForm.addEventListener("submit", search);
+searchForm.addEventListener("submit", searchSubmit);
 
 let currentDateElement = document.querySelector("#current-day-time");
 let currentDate = new Date();
 
 currentDateElement.innerHTML = formatDate(currentDate);
+
+searchCity("Paris");
