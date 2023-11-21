@@ -1,16 +1,17 @@
-function searchSubmit(event) { //
+function searchSubmit(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#city-search-field");
   searchCity(searchInputElement.value);
 }
 
-function searchCity(city){ //
+function searchCity(city){
+  console.log(city);
   let apiKey = "b2a5adcct04b33178913oc335f405433";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(currentWeather);
 }
 
-function currentWeather(response) { //
+function currentWeather(response) {
   let temperatureElement = document.querySelector("#main-temp");
   let temperature = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#current-city");
@@ -24,17 +25,15 @@ function currentWeather(response) { //
   let humidityElement = document.querySelector("#humidity");
 
   cityElement.innerHTML = response.data.city;
-  temperatureElement.innerHTML = `${temperature}°c`;
+  temperatureElement.innerHTML = `${temperature}°C`;
   weatherImageElement.innerHTML = `<img src=${weatherImageUrl} />`;
   weatherDescriptionElement.innerHTML = response.data.condition.description;
   feelsLikeElement.innerHTML = `${feelsLike}°`;
   windSpeedElement.innerHTML = `${windSpeed}`;
   humidityElement.innerHTML = response.data.temperature.humidity;
-
- // searchCity(response.data.city); // shouldn't be searchCity, should be the function managing the second API call
 }
 
-function formatDate(date) { //
+function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
   let day = date.getDay();
